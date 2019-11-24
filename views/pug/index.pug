@@ -1,0 +1,17 @@
+html
+  head
+    title passport oauth
+    meta(name='description' content='Home Page')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/public/style.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+  body
+    .container
+      header.jumbotron.m-4.p-4
+        h1.text-center OAuth with passport.js and Express
+      main
+        h2.m-5.text-center.text-secondary Social Login
+        .blockBtn.m-4.d-flex.justify-content-center
+          a.btn.btn-block.btn-primary(href='/auth/github') Login with Github!

@@ -1,0 +1,24 @@
+html
+  head
+    title passport oauth
+    meta(name='description' content='Profile Page')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='/public/style.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+  body
+    .container
+      header.jumbotron.m-4.p-4
+        h1.text-center OAuth with passport.js and Express
+      main
+        h2.mt-5.text-center.text-secondary My Profile
+        img.d-block.mx-auto.m-3(src=user.photo alt='user photo') 
+        h3=user.name
+        ul.list-group.list-group-flush
+          -
+            let entries = Object.entries(user)
+          each entry in entries
+            li.list-group-item= entry[0] + ": " + entry[1]
+      a.btn.btn-block.btn-danger.my-4(href='/logout') Logout
+
